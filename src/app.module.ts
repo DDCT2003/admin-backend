@@ -4,6 +4,8 @@ import { UserModule } from './user/user.module';
 import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { RopaModule } from './ropa/ropa.module';
+import { WeatherModule } from './weather/weather.module';
+import { ColorModule } from './color/color.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
@@ -11,6 +13,8 @@ import { RopaModule } from './ropa/ropa.module';
     ),
     UserModule,
     RopaModule,
+    WeatherModule,
+    ColorModule,
   ],
   controllers: [AppController],
   providers: [AppService],

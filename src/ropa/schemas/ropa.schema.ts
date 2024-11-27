@@ -1,5 +1,10 @@
 import {Schema, Prop, SchemaFactory} from "@nestjs/mongoose";
 
+export enum Formalidad{
+    Formal = 'Formal',
+    Semiformal= 'Semiformal',
+    Casual='Casual'
+}
 
 @Schema()
 export class Ropa{
@@ -17,6 +22,15 @@ export class Ropa{
 
     @Prop({required:true})
     tipo: string;   
+
+    @Prop({ required: true })
+    edad: string;
+  
+    @Prop({ required: true })
+    formalidad: Formalidad;
+        
+    @Prop({required:true})
+    clima: string;   
     
     @Prop({required:true})
     stock: string;   
